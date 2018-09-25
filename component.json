@@ -1,0 +1,8 @@
+{
+    "name": "store",
+    "description": "store component",
+    "local": [],
+    "scripts": ["index.js"],
+    "main": "index.js",
+    "dependencies": {}
+}
