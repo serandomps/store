@@ -1,4 +1,4 @@
-module.exports.cache = function (key, val) {
+exports.cache = function (key, val) {
     if (val) {
         sessionStorage.setItem(key, JSON.stringify(val));
         return val;
@@ -10,7 +10,7 @@ module.exports.cache = function (key, val) {
     return val ? JSON.parse(val) : null;
 };
 
-module.exports.persist = function (key, val) {
+exports.persist = function (key, val) {
     if (val) {
         localStorage.setItem(key, JSON.stringify(val));
         return val;
