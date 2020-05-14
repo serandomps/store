@@ -19,5 +19,12 @@ exports.persist = function (key, val) {
     if (val === null) {
         localStorage.removeItem(key);
     }
-    return o ? JSON.parse(o) : null;
+    if (!o) {
+        return null;
+    }
+    try {
+        return JSON.parse(o);
+    } catch (e) {
+        return null;
+    }
 };
